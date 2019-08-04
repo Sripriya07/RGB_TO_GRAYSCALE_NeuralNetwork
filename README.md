@@ -17,6 +17,10 @@ In the above paragraphs, I have mentioned that we design the autoencoders in a w
 Autoencoder learns by minimizing the loss function L(x, g(f(x))), where L is a loss function which penalizes g(f(x)) for being dissimilar from x. The g(f(x)) is the encoding and decoding process of the autoencoder (in other words output of the autoencoder). In our case, the loss function is mean squared error and x is an RGB image. The g(f(x)) is reconstructed grayscale image. Th loss function penalized the autoencoder for not being able to reconstruct the grayscale version of the image. Okay, enough of theory let’s start coding!!
 # Preparing the Dataset for Training and Testing :
 I have taken the training data for the autoencoder from TensorFlow flower dataset comprising of 3670 flower images and testing data from Olga Belitskaya kernel “The Dataset of Flower Images” from Kaggle. You can download the data from the links I have provided under the heading “Resources” at the bottom of this tutorial. After downloading the training dataset you will see a folder “flower_photos” having subfolders “daisy, dandelion, roses, sunflowers, and tulips” and the test dataset folder name is “flower_images” having flower images.
+dataset download links :
+
+Link to Training data: http://download.tensorflow.org/example_images/flower_photos.tgz
+Link to Testing data: https://www.kaggle.com/olgabelitskaya/the-dataset-of-flower-images/data
 # I. Preparing the training data
 To help in preparing the dataset I have used OpenCV and glob library. OpenCV is a computer vision library which has pre-built functions of computer vision algorithms and glob is a Unix style pathname pattern expansion, in simpler terms, based on the rules set by you it would return contents of the particular folder.
 
